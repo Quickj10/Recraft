@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recraft V3 Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎨 Recraft V3 Image Generator</h1>
+            <p class="subtitle">Generate new variations of your branding and icon designs</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h2>Generation Modes</h2>
+                    <button id="random-generate-btn" class="btn btn-primary btn-block">
+                        🎲 Random Generation
+                    </button>
+                    <button id="manual-generate-btn" class="btn btn-primary btn-block">
+                        ✏️ Manual Generation
+                    </button>
+                    <button id="batch-generate-btn" class="btn btn-primary btn-block">
+                        📦 Batch Processing
+                    </button>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Quick Info</h3>
+                    <p class="info-text">Add your API token in <code>config.js</code></p>
+                    <p class="info-text">Drag & drop images to upload</p>
+                    <p class="info-text">Generate unlimited variations</p>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Upload Zone -->
+                <section class="upload-section">
+                    <div id="upload-zone" class="upload-zone">
+                        <div class="upload-zone-content">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <h3>Drag & Drop Images Here</h3>
+                            <p>or click to browse</p>
+                            <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Source Images Gallery -->
+                <section class="gallery-section">
+                    <h2>Source Images</h2>
+                    <div id="image-gallery" class="gallery">
+                        <p class="empty-state">No source images yet. Upload images using drag & drop above.</p>
+                    </div>
+                </section>
+
+                <!-- Generated Images Gallery -->
+                <section class="gallery-section">
+                    <h2>Generated Images</h2>
+                    <div id="generated-gallery" class="gallery">
+                        <p class="empty-state">No generated images yet. Start generating!</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button id="close-modal" class="modal-close">&times;</button>
+            <div id="modal-content" class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
+

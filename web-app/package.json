@@ -1,0 +1,19 @@
+{
+  "name": "recraft-v3-generator",
+  "version": "1.0.0",
+  "description": "Recraft V3 Image Generator Web App",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server.js",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
